@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -76,11 +77,11 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
 
             mProgressBar = (ProgressBar) findViewById(R.id.mainProgressBar);
 
-            mDrawableX = getResources().getDrawable(R.drawable.ic_clear);
+            mDrawableX = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_clear, null);
             mDrawableX.setBounds(0, 0, mDrawableX.getMinimumWidth(),
                     mDrawableX.getMinimumHeight());
 
-            mDrawableSearch = getResources().getDrawable(android.R.drawable.ic_menu_search);
+            mDrawableSearch = ResourcesCompat.getDrawable(getResources(), android.R.drawable.ic_menu_search, null);
 
             mDrawableSearch.setBounds(0, 0, mDrawableSearch.getMinimumWidth(),
                     mDrawableSearch.getMinimumHeight());
